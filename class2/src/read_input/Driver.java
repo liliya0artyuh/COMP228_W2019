@@ -17,13 +17,13 @@ public class Driver {
 		
 		System.out.println("Please provide your age: ");
 		
-		//age = scanner.nextInt();
+		age = scanner.nextInt();
 		
 		//age = Integer.parseInt(scanner.nextLine());
 		
 		
-		String ageString = scanner.nextLine();
-		age = Integer.parseInt(ageString);
+		//String ageString = scanner.nextLine();
+		//age = Integer.parseInt(ageString);
 		
 		System.out.printf("Your name is: %s. You  are %d years old.", name, age);
 				
