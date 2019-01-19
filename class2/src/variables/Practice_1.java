@@ -10,7 +10,7 @@ public class Practice_1 {
 		boolean isStudent = true;
 		double price = 200.00;
 
-		Human human = new Human();
+		Human human = new Human(3, "dsfdsf", 4.44);
 
 		System.out.println("name: " + firstName );
 		System.out.println("age: " + age );
