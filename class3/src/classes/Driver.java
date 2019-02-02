@@ -46,7 +46,7 @@ public class Driver {
 		Door door;
 		String color = JOptionPane.showInputDialog("Please provide color of the door?");
 		String material = JOptionPane.showInputDialog("Please provide material of the door?");
-		
+
 		door = new Door(material, color);
 		System.out.println("door material " + door.getMaterial());
 		System.out.println("door color " + door.getColor());
