@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
 
-public class Main extends Application {
+public class Driver extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		//the file name below has to match your fxml file name 

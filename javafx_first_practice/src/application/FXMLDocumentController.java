@@ -4,6 +4,8 @@ import java.util.ResourceBundle;
 
 import javax.print.DocFlavor.URL;
 
+import application.model.Hospital;
+import application.model.Name;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +28,17 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         lblName.setText("Hello World!");
-        txtAInfo.setText(txtName.getText() + " " + txtSurname.getText());
+        
+        Hospital h = new Hospital();
+        
+        Name name = new Name();
+        name.setPatientLastName(txtSurname.getText());
+        name.setPatientName(txtName.getText());
+        
+        h.setName(name);
+        
+        
+        txtAInfo.setText( h.getName().getPatientName() + " " + h.getName().getPatientLastName());
     }
     
 
