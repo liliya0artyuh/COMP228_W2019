@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sat Mar 16 12:33:05 EDT 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0169-8759-876b-0000070491a0 
-on database directory E:\2019\prepwork\db_practice_classwork\books with class loader sun.misc.Launcher$AppClassLoader@4e0e2f2a 
-Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_65/db/lib/derby.jar
+Sat Mar 23 16:11:32 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-0169-ac2e-0bef-00001ee00000 
+on database directory D:\2019\labwork\COMP228_W2019\db_practice_classwork\addressbooks with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5ef04b5 
+Loaded from file:/C:/Users/lartyukh/Derby/db-derby-10.15.1.3-bin/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_65-b17
-user.dir=E:\2019\prepwork\db_practice_classwork
+java.runtime.version=10.0.2+13
+user.dir=D:\2019\labwork\COMP228_W2019\db_practice_classwork
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
