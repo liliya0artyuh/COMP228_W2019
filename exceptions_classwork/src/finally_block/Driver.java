@@ -13,7 +13,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 
-		// showExampleOfTryAndFinally();
+		//showExampleOfTryAndFinally();
 		showExampleOfTryCatchAndFinally();
 		showExampleOfGoodPurposeOfFinallyBlock();
 		showExampleOfTryAndFinallyWithoutHandingException();

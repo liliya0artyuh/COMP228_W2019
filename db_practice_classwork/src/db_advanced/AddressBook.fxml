@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db_advanced.AddressBookController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" >
    <bottom>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
@@ -53,6 +53,7 @@
                   <TextField fx:id="emailTextField" maxWidth="1.7976931348623157E308" prefColumnCount="25" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="phoneTextField" maxWidth="1.7976931348623157E308" prefColumnCount="25" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Button mnemonicParsing="false" onAction="#addEntryButtonPressed" text="Add Entry" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
                <VBox.margin>
                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />

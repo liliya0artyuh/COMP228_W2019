@@ -31,10 +31,10 @@ public class AddressBookController {
    // populate listView and set up listener for selection events
    public void initialize() {
 	   //
-	   if(personQueries.getNumberOfRows() == 8) {
+	   if(personQueries.getNumberOfRows() < 5) {
 	   //5 times loop
 		   System.out.println("so far so good");
-	  // personQueries.addPerson("", "", "", "");
+	   personQueries.addTicket("", "", "", "");
 	   }
 	   
       listView.setItems(contactList); // bind to contactsList
@@ -50,7 +50,7 @@ public class AddressBookController {
 
    // get all the entries from the database to populate contactList
    private void getAllEntries() {
-      contactList.setAll(personQueries.getAllPeople()); 
+      contactList.setAll(personQueries.getAllTickets()); 
       selectFirstEntry();
    }
 
@@ -78,7 +78,7 @@ public class AddressBookController {
    // add a new entry
    @FXML
    void addEntryButtonPressed(ActionEvent event) {
-      int result = personQueries.addPerson(
+      int result = personQueries.addTicket(
          firstNameTextField.getText(), lastNameTextField.getText(), 
          emailTextField.getText(), phoneTextField.getText());                                     
       

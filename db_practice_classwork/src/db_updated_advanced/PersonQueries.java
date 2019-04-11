@@ -21,6 +21,7 @@ public class PersonQueries {
    private PreparedStatement insertNewPerson;       
    private PreparedStatement countAllPeople;
 
+   private static final String ADDRESSID = "AddressID";
    // constructor
    public PersonQueries() {
       try {
@@ -32,7 +33,7 @@ public class PersonQueries {
             "SELECT * FROM Addresses ORDER BY LastName, FirstName");
          
          countAllPeople = connection.prepareStatement(
-                 "SELECT * FROM Addresses ORDER BY LastName, FirstName");
+                 "SELECT Count(*) FROM Addresses");
          
          // create query that selects entries with last names 
          // that begin with the specified characters 
@@ -53,18 +54,23 @@ public class PersonQueries {
    } 
    
    // select all of the addresses in the database
-   public List<Person> getAllPeople() {
+   public List<Person> getAllTickets() {
       // executeQuery returns ResultSet containing matching entries
       try (ResultSet resultSet = selectAllPeople.executeQuery()) {
          List<Person> results = new ArrayList<Person>();
          
          while (resultSet.next()) {
-            results.add(new Person(
-               resultSet.getInt("AddressID"),
-               resultSet.getString("FirstName"),
-               resultSet.getString("LastName"),
-               resultSet.getString("Email"),
-               resultSet.getString("PhoneNumber")));
+        	 
+        	 int id = resultSet.getInt(ADDRESSID);
+        	 String firstName = resultSet.getString("FirstName");
+        	 String lastName =  resultSet.getString("LastName");
+        	String email =  resultSet.getString("Email");
+        	String phone = resultSet.getString("PhoneNumber");
+        	//int seatNum = resultSet.getInt("SeatNumber");
+        	
+        	Person person =  new Person(id,firstName,lastName, email, phone);
+        	
+            results.add(person);
          } 
 
          return results;
@@ -84,7 +90,7 @@ public class PersonQueries {
 	         
 	         while (resultSet.next()) {
 	            results.add(new Person(
-	               resultSet.getInt("AddressID"),
+	               resultSet.getInt(ADDRESSID),
 	               resultSet.getString("FirstName"),
 	               resultSet.getString("LastName"),
 	               resultSet.getString("Email"),
@@ -117,7 +123,7 @@ public class PersonQueries {
 
          while (resultSet.next()) {
             results.add(new Person(
-               resultSet.getInt("addressID"),
+               resultSet.getInt(ADDRESSID),
                resultSet.getString("FirstName"),
                resultSet.getString("LastName"),
                resultSet.getString("Email"),
@@ -133,7 +139,7 @@ public class PersonQueries {
    }
    
    // add an entry
-   public int addPerson(String firstName, String lastName, 
+   public int addTicket(String firstName, String lastName, 
       String email, String phoneNumber) {
       
       // insert the new entry; returns # of rows updated
